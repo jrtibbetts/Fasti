@@ -13,7 +13,6 @@
 		960C447118921C170095BBFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 960C446F18921C170095BBFB /* InfoPlist.strings */; };
 		960C447318921C170095BBFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C447218921C170095BBFB /* main.m */; };
 		960C447718921C170095BBFB /* PKLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C447618921C170095BBFB /* PKLAppDelegate.m */; };
-		960C447A18921C170095BBFB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960C447818921C170095BBFB /* Main_iPhone.storyboard */; };
 		960C447D18921C170095BBFB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960C447B18921C170095BBFB /* Main_iPad.storyboard */; };
 		960C448018921C170095BBFB /* PKLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C447F18921C170095BBFB /* PKLMasterViewController.m */; };
 		960C448318921C170095BBFB /* PKLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C448218921C170095BBFB /* PKLDetailViewController.m */; };
@@ -23,6 +22,11 @@
 		960C448E18921C170095BBFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960C446A18921C170095BBFB /* UIKit.framework */; };
 		960C449618921C170095BBFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 960C449418921C170095BBFB /* InfoPlist.strings */; };
 		960C449818921C170095BBFB /* FastiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C449718921C170095BBFB /* FastiTests.m */; };
+		960C44A518921C730095BBFB /* PKLYearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C44A218921C730095BBFB /* PKLYearViewController.m */; };
+		960C44A618921C730095BBFB /* PKLMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C44A418921C730095BBFB /* PKLMonthViewController.m */; };
+		960C44A818921C900095BBFB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960C44A718921C900095BBFB /* Main_iPhone.storyboard */; };
+		960C44AA18921D9E0095BBFB /* Fasti.plist in Resources */ = {isa = PBXBuildFile; fileRef = 960C44A918921D9E0095BBFB /* Fasti.plist */; };
+		966112E11898976C006224A8 /* PKLMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 966112E01898976C006224A8 /* PKLMonthCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +50,6 @@
 		960C447418921C170095BBFB /* Fasti-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fasti-Prefix.pch"; sourceTree = "<group>"; };
 		960C447518921C170095BBFB /* PKLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKLAppDelegate.h; sourceTree = "<group>"; };
 		960C447618921C170095BBFB /* PKLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKLAppDelegate.m; sourceTree = "<group>"; };
-		960C447918921C170095BBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		960C447C18921C170095BBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		960C447E18921C170095BBFB /* PKLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKLMasterViewController.h; sourceTree = "<group>"; };
 		960C447F18921C170095BBFB /* PKLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKLMasterViewController.m; sourceTree = "<group>"; };
@@ -58,6 +61,14 @@
 		960C449318921C170095BBFB /* FastiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FastiTests-Info.plist"; sourceTree = "<group>"; };
 		960C449518921C170095BBFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		960C449718921C170095BBFB /* FastiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastiTests.m; sourceTree = "<group>"; };
+		960C44A118921C730095BBFB /* PKLYearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKLYearViewController.h; sourceTree = "<group>"; };
+		960C44A218921C730095BBFB /* PKLYearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKLYearViewController.m; sourceTree = "<group>"; };
+		960C44A318921C730095BBFB /* PKLMonthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKLMonthViewController.h; sourceTree = "<group>"; };
+		960C44A418921C730095BBFB /* PKLMonthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKLMonthViewController.m; sourceTree = "<group>"; };
+		960C44A718921C900095BBFB /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		960C44A918921D9E0095BBFB /* Fasti.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Fasti.plist; sourceTree = "<group>"; };
+		966112DF1898976C006224A8 /* PKLMonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKLMonthCell.h; sourceTree = "<group>"; };
+		966112E01898976C006224A8 /* PKLMonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKLMonthCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +128,18 @@
 		960C446C18921C170095BBFB /* Fasti */ = {
 			isa = PBXGroup;
 			children = (
+				960C44A718921C900095BBFB /* Main_iPhone.storyboard */,
+				960C447B18921C170095BBFB /* Main_iPad.storyboard */,
 				960C447518921C170095BBFB /* PKLAppDelegate.h */,
 				960C447618921C170095BBFB /* PKLAppDelegate.m */,
-				960C447818921C170095BBFB /* Main_iPhone.storyboard */,
-				960C447B18921C170095BBFB /* Main_iPad.storyboard */,
+				960C44A118921C730095BBFB /* PKLYearViewController.h */,
+				960C44A218921C730095BBFB /* PKLYearViewController.m */,
+				960C44A318921C730095BBFB /* PKLMonthViewController.h */,
+				960C44A418921C730095BBFB /* PKLMonthViewController.m */,
 				960C447E18921C170095BBFB /* PKLMasterViewController.h */,
 				960C447F18921C170095BBFB /* PKLMasterViewController.m */,
+				966112DF1898976C006224A8 /* PKLMonthCell.h */,
+				966112E01898976C006224A8 /* PKLMonthCell.m */,
 				960C448118921C170095BBFB /* PKLDetailViewController.h */,
 				960C448218921C170095BBFB /* PKLDetailViewController.m */,
 				960C448418921C170095BBFB /* Images.xcassets */,
@@ -138,6 +155,7 @@
 				960C446F18921C170095BBFB /* InfoPlist.strings */,
 				960C447218921C170095BBFB /* main.m */,
 				960C447418921C170095BBFB /* Fasti-Prefix.pch */,
+				960C44A918921D9E0095BBFB /* Fasti.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,7 +257,8 @@
 			files = (
 				960C447D18921C170095BBFB /* Main_iPad.storyboard in Resources */,
 				960C448518921C170095BBFB /* Images.xcassets in Resources */,
-				960C447A18921C170095BBFB /* Main_iPhone.storyboard in Resources */,
+				960C44A818921C900095BBFB /* Main_iPhone.storyboard in Resources */,
+				960C44AA18921D9E0095BBFB /* Fasti.plist in Resources */,
 				960C447118921C170095BBFB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,9 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				960C447718921C170095BBFB /* PKLAppDelegate.m in Sources */,
+				960C44A618921C730095BBFB /* PKLMonthViewController.m in Sources */,
+				960C44A518921C730095BBFB /* PKLYearViewController.m in Sources */,
 				960C448318921C170095BBFB /* PKLDetailViewController.m in Sources */,
 				960C448018921C170095BBFB /* PKLMasterViewController.m in Sources */,
 				960C447318921C170095BBFB /* main.m in Sources */,
+				966112E11898976C006224A8 /* PKLMonthCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,14 +313,6 @@
 				960C447018921C170095BBFB /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		960C447818921C170095BBFB /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				960C447918921C170095BBFB /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		960C447B18921C170095BBFB /* Main_iPad.storyboard */ = {
@@ -481,6 +495,7 @@
 				960C449D18921C170095BBFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		960C449E18921C170095BBFB /* Build configuration list for PBXNativeTarget "FastiTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +504,7 @@
 				960C44A018921C170095BBFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
