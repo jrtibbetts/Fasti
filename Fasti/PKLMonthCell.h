@@ -12,5 +12,8 @@
 
 @property (strong, nonatomic)   IBOutlet UILabel    *monthNameLabel;
 @property (strong, nonatomic)   NSDictionary        *monthInfo;
+@property (strong, nonatomic)   NSMutableArray      *dateViews;
+
+- (void)resetDateLabels;
 
 @end

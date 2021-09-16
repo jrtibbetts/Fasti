@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19197" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Dies" representedClassName="Dies" syncable="YES" codeGenerationType="class">
+        <attribute name="numerus" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="mensis" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mensis" inverseName="dies" inverseEntity="Mensis"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Mensis" representedClassName="Mensis" syncable="YES" codeGenerationType="class">
+        <attribute name="nomen" attributeType="String"/>
+        <attribute name="numerus" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="dies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dies" inverseName="mensis" inverseEntity="Dies"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Mensis" positionX="-63" positionY="-9" width="128" height="74"/>
+        <element name="Dies" positionX="-54" positionY="0" width="128" height="59"/>
+    </elements>
+</model>

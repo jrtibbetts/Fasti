@@ -13,6 +13,7 @@
 @interface PKLYearViewController ()
 
 @property (strong, nonatomic)   NSMutableArray      *months;
+@property (strong, nonatomic)   NSMutableArray      *monthCells;
 
 @end
 
@@ -22,7 +23,7 @@
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.clearsSelectionOnViewWillAppear = NO;
-        self.preferredContentSize = CGSizeMake(320.0, 600.0);
+        // self.preferredContentSize = CGSizeMake(320.0, 600.0);
     }
     [super awakeFromNib];
 }
@@ -33,7 +34,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // Load calendar data.
-    NSString *calendarPlistPath = [[NSBundle mainBundle] pathForResource:@"Fasti" ofType:@"plist"];
+    NSString *calendarPlistPath = [[NSBundle mainBundle] pathForResource:@"Fasti"
+                                                                  ofType:@"plist"];
     self.months = [NSMutableArray arrayWithArray:[NSArray arrayWithContentsOfFile:calendarPlistPath]];
     self.collectionView.dataSource = self;
 }
@@ -71,8 +73,9 @@
 {
     PKLMonthCell *monthCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MonthCell"
                                                                         forIndexPath:indexPath];
-    NSDictionary *monthInfo = self.months[indexPath.row];
-    monthCell.monthNameLabel.text = monthInfo[@"Nomen"];
+    monthCell.monthInfo = self.months[indexPath.row];
+    monthCell.monthNameLabel.text = monthCell.monthInfo[@"Nomen"];
+    // [monthCell resetDateLabels];
     
     return monthCell;
 }
