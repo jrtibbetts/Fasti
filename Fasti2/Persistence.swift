@@ -3,45 +3,38 @@
 import CoreData
 
 struct PersistenceController {
-    static var shared: PersistenceController = {
-        var persistenceController = PersistenceController()
-        let viewContext = persistenceController.container.viewContext
 
-        for nomenMensis in ["Ianuarius, Februarius, Mars, Aprilis, Maius, Iunius, Sextilis, Septilis, October, November, December"] {
-            let mensis = Mensis(context: viewContext)
+    static func initializeContext(_ context: NSManagedObjectContext) {
+        ["Ianuarius", "Februarius", "Mars", "Aprilis", "Maius", "Sextilis", "Septilis", "October", "November", "December"].enumerated().forEach { (index, nomenMensis) in
+            let mensis = Mensis(context: context)
             mensis.nomen = nomenMensis
+            mensis.numerus = Int16(index + 1)
         }
 
         do {
-            try viewContext.save()
+            try context.save()
         } catch {
             // Replace this implementation with code to handle the error appropriately.
             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+    }
+
+    static var shared: PersistenceController = {
+        var persistenceController = PersistenceController()
+        let viewContext = persistenceController.container.viewContext
+        initializeContext(viewContext)
 
         return persistenceController
     }()
 
     static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
+        let persistenceController = PersistenceController(inMemory: true)
+        let viewContext = persistenceController.container.viewContext
+        initializeContext(viewContext)
 
-        for nomenMensis in ["Ianuarius, Februarius, Mars, Aprilis, Maius, Iunius, Sextilis, Septilis, October, November, December"] {
-            let mensis = Mensis(context: viewContext)
-            mensis.nomen = nomenMensis
-        }
-
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
+        return persistenceController
     }()
 
     let container: NSPersistentContainer
