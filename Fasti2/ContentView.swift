@@ -17,7 +17,7 @@ struct ContentView: View {
 
     var body: some View {
         LazyVGrid(columns: columns, alignment: .center, spacing: 8.0) {
-            ForEach(menses, id: \.numerus) { mensis in
+            ForEach(menses) { mensis in
                 VStack {
                     Text(mensis.nomen ?? "(nullum nomen)")
                 }
