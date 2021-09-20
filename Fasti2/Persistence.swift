@@ -4,7 +4,10 @@ import CoreData
 
 struct PersistenceController {
 
-    static func initializeContext(_ context: NSManagedObjectContext) {
+    static private func initialize(inMemory: Bool = false) -> PersistenceController {
+        let persistenceController = PersistenceController(inMemory: inMemory)
+        let context = persistenceController.container.viewContext
+
         ["Ianuarius", "Februarius", "Mars", "Aprilis", "Maius", "Sextilis", "Septilis", "October", "November", "December"].enumerated().forEach { (index, nomenMensis) in
             let mensis = Mensis(context: context)
             mensis.nomen = nomenMensis
@@ -19,22 +22,16 @@ struct PersistenceController {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+
+        return persistenceController
     }
 
     static var shared: PersistenceController = {
-        var persistenceController = PersistenceController()
-        let viewContext = persistenceController.container.viewContext
-        initializeContext(viewContext)
-
-        return persistenceController
+        return initialize(inMemory: false)
     }()
 
     static var preview: PersistenceController = {
-        let persistenceController = PersistenceController(inMemory: true)
-        let viewContext = persistenceController.container.viewContext
-        initializeContext(viewContext)
-
-        return persistenceController
+        return initialize(inMemory: true)
     }()
 
     let container: NSPersistentContainer
